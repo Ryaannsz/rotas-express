@@ -1,15 +1,14 @@
+import mongoose from 'mongoose';
 
-const mongoose = require('mongoose');
 
-
-const mongoURI = 'mongodb+srv://ryanbernardo:Rqz61cMuWLGqcUtP@cluster0.wuprkfo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const mongoURI = 'mongodb+srv://ryanzinteste:senhaparabancoteste12@cluster0.wuprkfo.mongodb.net/fullstack?retryWrites=true&w=majority';
 
 
 mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+
   dbName: "fullstack"
-});
+}).then(() => console.log("conectado!!!!!!"))
+.catch((error) => console.log("deu erro: "+error));
 
 
 mongoose.connection

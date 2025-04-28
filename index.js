@@ -1,5 +1,6 @@
 import express from 'express'
 import router from './routes/routes.js'
+import './models/db.js'
 
 const app = express()
 

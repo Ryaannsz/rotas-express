@@ -2,7 +2,6 @@ import userService from '../services/user.service.js';
 
 
 const saveEntity = async (req, res) => {
-    console.log(req.body)
     if(!req.body || !req.body.name || !req.body.password || !req.body.email) 
         return res.status(400).json({message: "completar todos os dados"});
     userService.register(req, res);
