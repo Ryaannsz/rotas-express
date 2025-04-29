@@ -1,4 +1,10 @@
-import app from './app.js'
-import serverless from 'serverless-http'
+import express from 'express'
+import router from './routes/routes.js'
+import './models/db.js'
 
-export const handler = serverless(app)
+const app = express();
+
+app.use(express.json());
+app.use(router);
+
+app.listen(8080)
