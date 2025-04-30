@@ -14,6 +14,10 @@ const register = async (req, res) => {
         return res.status(400).json({ message: "E-mail já cadastrado" });
     }
 
+    if (!isPasswordValid(password)) {
+        return res.status(400).json({ message: "A senha deve ter no mínimo 8 caracteres, uma letra maiúscula e um caractere especial." });
+    }
+
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(password, salt);
 
@@ -51,6 +55,14 @@ const login = async (req, res) => {
         return res.status(400).json({message: "Erro ao efetuar login "+error})
     }
 
+}
+
+function isPasswordValid(password) {
+    const minLength = 8;
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    return password.length >= minLength && hasUpperCase && hasSpecialChar;
 }
 
 export default {register, login}
