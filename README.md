@@ -2,17 +2,17 @@
 Este é o backend da aplicação de cadastro de contatos, desenvolvido com Node.js, Express, Mongoose e MongoDB. Utiliza autenticação com JWT e armazenamento seguro de variáveis com dotenv.
 
 # 🚀 Tecnologias Utilizadas
-🧩 Node.js
+- 🧩 Node.js
 
-⚙️ Express
+- ⚙️ Express
 
-🍃 MongoDB
+- 🍃 MongoDB
 
-🧬 Mongoose
+- 🧬 Mongoose
 
-🔐 JWT (JSON Web Token)
+- 🔐 JWT (JSON Web Token)
 
-⚙️ dotenv
+- ⚙️ dotenv
 
 # ⚙️ Variáveis de Ambiente
 Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
@@ -24,7 +24,7 @@ JWT_SECRET=sua-chave-secreta
 
 # 📦 Instalação
 ```
-git clone https://github.com/seu-usuario/backend-mongo-contato.git
+git clone https://github.com/Ryaannsz/rotas-express.git
 cd backend-mongo-contato
 npm install
 ```
